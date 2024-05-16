@@ -29,6 +29,7 @@
 		32CE6C4C2BF4DA8A00493694 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE6C4B2BF4DA8A00493694 /* RegisterViewModel.swift */; };
 		32CE6C4E2BF4DA9A00493694 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE6C4D2BF4DA9A00493694 /* LoginView.swift */; };
 		32CE6C502BF4DAA700493694 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE6C4F2BF4DAA700493694 /* LoginViewModel.swift */; };
+		32CE6C542BF611E900493694 /* LoginOrRegisterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE6C532BF611E900493694 /* LoginOrRegisterHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		32CE6C4B2BF4DA8A00493694 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		32CE6C4D2BF4DA9A00493694 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		32CE6C4F2BF4DAA700493694 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		32CE6C532BF611E900493694 /* LoginOrRegisterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOrRegisterHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				32CE6C202BF4D6E800493694 /* MainView */,
 				32CE6C1F2BF4D6E000493694 /* RegisterView */,
 				32CE6C1D2BF4D6C700493694 /* LoginView */,
+				32CE6C512BF6118900493694 /* CommonView */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -326,6 +329,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		32CE6C512BF6118900493694 /* CommonView */ = {
+			isa = PBXGroup;
+			children = (
+				32CE6C522BF6119E00493694 /* LoginOrRegisterHeaderView */,
+			);
+			path = CommonView;
+			sourceTree = "<group>";
+		};
+		32CE6C522BF6119E00493694 /* LoginOrRegisterHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				32CE6C532BF611E900493694 /* LoginOrRegisterHeaderView.swift */,
+			);
+			path = LoginOrRegisterHeaderView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -421,6 +440,7 @@
 				32CE6C042BF4CCD100493694 /* ToDoListApp.swift in Sources */,
 				32CE6C382BF4D93500493694 /* ToDoListItemViewModel.swift in Sources */,
 				32CE6C482BF4DA1E00493694 /* MainViewModel.swift in Sources */,
+				32CE6C542BF611E900493694 /* LoginOrRegisterHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
