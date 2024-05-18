@@ -9,39 +9,30 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @State var email = ""
-    @State var password = ""
+    @ObservedObject var viewModel = LoginViewModel()
     
     var body: some View {
         NavigationView {
             VStack {
                 //MARK: - Header View
-                LoginOrRegisterHeaderView()
-                    .offset(y: -120)
+                LoginOrRegisterHeaderView(title: "To Do List",
+                                          subtitle: "Get it Done",
+                                          rotationAngle: 15,
+                                          bgColor: .pink)
+                .offset(y: -150)
                 
                 
                 //MARK:  -Login Form
-                Form {
-                    TextField("Email", text: $email)
-                        .textFieldStyle(DefaultTextFieldStyle())
-                    
-                    SecureField("Password", text: $password)
-                    
-                    Button(action: {
-                        //Login Action
-                    }, label: {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 8)
-                                .foregroundStyle(.blue)
-                            
-                            Text("Login")
-                                .bold()
-                                .foregroundStyle(.white)
-                        }
-                    })
-                    .frame(height: 40)
+                LoginOrRegistrationForm(fieldOnePlaceHolder: nil,
+                                        fieldTwoPlaceHolder: "Email",
+                                        secureFieldPlaceholder: "Password",
+                                        error: viewModel.validationError ?? "",
+                                        actionButtonText: "Login",
+                                        actionButtonBgColor: .blue) { _,email,password in
+                    print("Login with: \n Email: \(email)\nPassword: \(password)")
+                    viewModel.login(email: email, password: password)
                 }
-                
+                .offset(y: -50)
                 
                 //MARK: - RegisterView
                 VStack {
@@ -53,7 +44,6 @@ struct LoginView: View {
                 
                 Spacer()
             }
-            .padding()
         }
     }
 }
